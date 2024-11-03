@@ -1,5 +1,5 @@
+import { Providers } from "./providers";
 import "./globals.css";
-import { ThemeProvider } from "@/components/ui/theme-provider";
 
 export default function RootLayout({
   children,
@@ -9,14 +9,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
-          {children}
-        </ThemeProvider>
+        <Providers>{children}</Providers>
       </body>
     </html>
   );
